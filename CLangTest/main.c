@@ -8,20 +8,14 @@
 #include <stdio.h>
 
 main() {
-    int score1, score2, score3;
-    printf("점수를 입력하세요 : ");
-    scanf("%d", &score1);
-    printf("점수를 입력하세요 : ");
-    scanf("%d", &score2);
-    printf("점수를 입력하세요 : ");
-    scanf("%d", &score3);
+    int num;
+    do {
+        scanf("%d", &num);
+        if (num > 0)
+            if (num % 2 == 1) printf("홀수\n");
+            else printf("짝수\n");
+    } while (num > 0);
     
-    if (score1 >= score2 && score1 >= score3)
-        printf("%d\n", score1);
-        else if (score2 >= score1 && score2 >= score3)
-            printf("%d\n", score2);
-    else
-        printf("%d\n", score3);
 }
 
 
