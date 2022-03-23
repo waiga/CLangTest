@@ -7,15 +7,21 @@
 
 #include <stdio.h>
 
-
 main() {
-    int score, pass;
+    int score1, score2, score3;
     printf("점수를 입력하세요 : ");
-    scanf("%d", &score);
-    printf("합격점을 입력하세요 : ");
-    scanf("%d", &pass);
-    if (score >= pass)
-        printf("합격\n");
+    scanf("%d", &score1);
+    printf("점수를 입력하세요 : ");
+    scanf("%d", &score2);
+    printf("점수를 입력하세요 : ");
+    scanf("%d", &score3);
+    
+    if (score1 >= score2 && score1 >= score3)
+        printf("%d\n", score1);
+        else if (score2 >= score1 && score2 >= score3)
+            printf("%d\n", score2);
     else
-        printf("불합격\n");
+        printf("%d\n", score3);
 }
+
+
