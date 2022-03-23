@@ -9,13 +9,14 @@
 
 main() {
     int num;
-    do {
+    while (1) {
+        printf("숫자를 입력하세요 : ");
         scanf("%d", &num);
-        if (num > 0)
-            if (num % 2 == 1) printf("홀수\n");
-            else printf("짝수\n");
-    } while (num > 0);
-    
+        if (num < 0) break;
+        if (num == 0) continue;
+        if (num % 2 == 1) printf("홀수\n");
+        else printf("짝수\n");
+    }
 }
 
 
