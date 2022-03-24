@@ -8,19 +8,16 @@
 #include <stdio.h>
 
 main() {
-    int A[4][2], s, i, j;
-    for(i=0; i<4; i++) {
-        printf("%d번의 영어, 수학 성적을 입력하시오. :", i+1);
-        for(j=0; j<2; j++)
-            scanf("%d", &A[i][j]);
-    }
-    for(i=0; i<4; i++) {
-        s=0;
-        printf("%d번 총 점수 : ", i+1);
-        for(j=0; j<2; j++)
-            s += A[i][j];
-        printf("%d\n", s);
-    }
+    int *p, i;
+    int a[5] = {100, 90, 80, 70, 60};
+    p=a;
+    for(i=0; i<5; i++)
+        printf("%d ", a[i]);
+    printf("\n");
+    for(i=0; i<5; i++)
+        printf("%d ", *(p+i));
+    printf("\n");
+    printf("%d", *(p+0));
 }
 
 
