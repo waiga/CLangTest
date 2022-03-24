@@ -7,17 +7,20 @@
 
 #include <stdio.h>
 
-main() {
-    int *p, i;
-    int a[5] = {100, 90, 80, 70, 60};
-    p=a;
-    for(i=0; i<5; i++)
-        printf("%d ", a[i]);
-    printf("\n");
-    for(i=0; i<5; i++)
-        printf("%d ", *(p+i));
-    printf("\n");
-    printf("%d", *(p+0));
+char star[20];
+int f(int n) {
+    if(n>0){
+        f(n-1);
+        star[n]='*';
+        printf("%s\n", star+1);
+    }
+    return 0;
 }
 
+main() {
+    int n;
+    scanf("%d", &n);
+    f(n);
+    
+}
 
